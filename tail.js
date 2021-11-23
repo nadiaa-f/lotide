@@ -5,11 +5,10 @@ const assertEqual = function(actual, expected) {
     console.log(`🛑🛑🛑Asseration Failed: ${actual} !== ${expected}`);
   }
 };
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
 
-const tail = function(lastHead) {
-  return lastHead.slice(1);
+const tail = function(array) {
+  let newArray = array.slice(1);
+  return newArray;
 };
 
 const words = ["Yo Yo", "Lighthouse", "Labs"];
