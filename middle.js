@@ -10,12 +10,10 @@ const eqArrays = function(array1, array2) {
   return true;
 };
 
-const assertArrayEquals = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅Asseration Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑Asseration Failed: ${actual} !== ${expected}`);
-  }
+const assertArraysEqual = function(arrayOne, arrayTwo) {
+  if (eqArrays(arrayOne, arrayTwo))
+    return console.log(`✅✅✅ Assertion Passed: ${arrayOne} === ${arrayTwo}`);
+  else return console.log(`🛑🛑🛑 Assertion Failed: ${arrayOne} !== ${arrayTwo}`);
 };
 
 const middle = function(nadia) {
@@ -30,7 +28,7 @@ const middle = function(nadia) {
   }
 };
 
-assertArrayEquals(middle([]),[]);
-assertArrayEquals(middle([1]),[]);
-assertArrayEquals(middle([1, 2, 3]),[2]);
-assertArrayEquals(middle([1, 2, 3, 4, 5, 6]),[4,5]);
+assertArraysEqual(middle([]),[]);
+assertArraysEqual(middle([1]),[]);
+assertArraysEqual(middle([1, 2, 3]),[2]);
+assertArraysEqual(middle([1, 2, 3, 4, 5, 6]),[4,5]);

@@ -15,5 +15,7 @@ const countAllLetters = function(countString) {
       letterCount[letter] = 1;
     }
   }
+  console.log(letterCount);
   return letterCount;
 };
+countAllLetters("Nadia Fatah");

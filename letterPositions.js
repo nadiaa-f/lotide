@@ -1,11 +1,3 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅Asseration Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑Asseration Failed: ${actual} !== ${expected}`);
-  }
-};
-
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return "false";
@@ -16,6 +8,12 @@ const eqArrays = function(array1, array2) {
     }
   }
   return true;
+};
+
+const assertArraysEqual = function(arrayOne, arrayTwo) {
+  if (eqArrays(arrayOne, arrayTwo))
+    return console.log(`✅✅✅ Assertion Passed: ${arrayOne} === ${arrayTwo}`);
+  else return console.log(`🛑🛑🛑 Assertion Failed: ${arrayOne} !== ${arrayTwo}`);
 };
 
 const letterPositions = function(sentence) {
@@ -31,4 +29,4 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-assertEqual(letterPositions("hello").e, [1]); //fail
+assertArraysEqual(letterPositions("hello").e, [1]); //fail
