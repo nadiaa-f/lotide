@@ -3,7 +3,7 @@ const middle = require('../middle');
 
 describe("#middle", () => {
   it("returns [] for []", () => {
-    assert.strictEqual(middle([]),[]);
+    assert.deepEqual(middle([]),[]);
   });
   it("returns [2] for [1, 2, 3]", () => {
     assert.deepEqual(middle([1, 2, 3]), [2]);
