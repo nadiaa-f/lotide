@@ -5,7 +5,7 @@ describe("#tail", () => {
   it("makes sure original array still has 3 elements", () => {
     const words = ["Yo Yo", "Lighthouse", "Labs"];
     tail(words);
-    assert.strictEqual(words.length, 3); 
+    assert.strictEqual(words.length, 3);
   });
 });
 
